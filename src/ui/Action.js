@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 const Action = props => (
   <View style={[props.containerStyle, styles.container]}>
     <Text style={[props.textStyle, styles.text]}>
-      Clean your computer screen and here's a really long one for example
+      Clean your computer screen and here is a really long one for example
     </Text>
   </View>
 )
