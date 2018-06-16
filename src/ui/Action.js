@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { shape } from 'prop-types'
 
 const styles = StyleSheet.create({
   container: {
@@ -19,5 +20,15 @@ const Action = props => (
     </Text>
   </View>
 )
+
+Action.propTypes = {
+  containerStyle: shape,
+  textStyle: shape,
+}
+
+Action.defaultProps = {
+  containerStyle: {},
+  textStyle: {},
+}
 
 export default Action
