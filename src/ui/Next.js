@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { shape } from 'prop-types'
 
 const { height, width } = Dimensions.get('window')
 
@@ -40,8 +39,8 @@ const Next = props => (
 )
 
 Next.propTypes = {
-  containerStyle: shape,
-  textStyle: shape,
+  containerStyle: View.propTypes.style,
+  textStyle: Text.propTypes.style,
 }
 
 Next.defaultProps = {

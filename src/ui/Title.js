@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { shape } from 'prop-types'
 
 const styles = StyleSheet.create({
   container: {
@@ -20,8 +19,8 @@ const Title = props => (
 )
 
 Title.propTypes = {
-  containerStyle: shape,
-  textStyle: shape,
+  containerStyle: View.propTypes.style,
+  textStyle: Text.propTypes.style,
 }
 
 Title.defaultProps = {
