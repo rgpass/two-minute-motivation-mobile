@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
+import { func } from 'prop-types'
 
 const { height, width } = Dimensions.get('window')
 
@@ -29,16 +30,14 @@ const styles = StyleSheet.create({
 
 const Next = props => (
   <View style={[props.containerStyle, styles.container]}>
-    <TouchableOpacity
-      onPress={() => console.warn('pressed')}
-      style={styles.button}
-    >
+    <TouchableOpacity onPress={props.onPress} style={styles.button}>
       <Text style={[props.textStyle, styles.text]}>Next</Text>
     </TouchableOpacity>
   </View>
 )
 
 Next.propTypes = {
+  onPress: func.isRequired,
   containerStyle: View.propTypes.style,
   textStyle: Text.propTypes.style,
 }
